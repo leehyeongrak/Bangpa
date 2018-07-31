@@ -20,6 +20,7 @@
 		3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */; };
 		3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */; };
 		3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */; };
+		3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageViewController.storyboard; sourceTree = "<group>"; };
 		3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
+		3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3ED5CDF92110AB8700E8DF6B /* Extensions */,
 				3ED5CDF62110A1C000E8DF6B /* Presenters */,
 				3ED5CDF521109DB100E8DF6B /* Storyboards */,
 				3ED5CDD021108FFD00E8DF6B /* ViewControllers */,
@@ -110,6 +113,14 @@
 				3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3ED5CDF92110AB8700E8DF6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
