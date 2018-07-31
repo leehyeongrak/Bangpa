@@ -16,9 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="HoB-Zb-MdQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rAO-8e-gkP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SQc-fx-7gH">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SQc-fx-7gH" id="5ZX-m9-bbf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rzf-Np-32e" firstAttribute="trailing" secondItem="rAO-8e-gkP" secondAttribute="trailing" id="6yg-yh-6uP"/>
+                            <constraint firstItem="rAO-8e-gkP" firstAttribute="top" secondItem="rzf-Np-32e" secondAttribute="top" id="WeR-HH-liC"/>
+                            <constraint firstItem="rzf-Np-32e" firstAttribute="bottom" secondItem="rAO-8e-gkP" secondAttribute="bottom" id="cNA-cX-YU8"/>
+                            <constraint firstItem="rAO-8e-gkP" firstAttribute="leading" secondItem="rzf-Np-32e" secondAttribute="leading" id="n9U-Kj-41P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rzf-Np-32e"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="rAO-8e-gkP" id="oyN-lT-KKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWd-QB-nn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
