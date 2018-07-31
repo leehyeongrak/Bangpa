@@ -34,8 +34,24 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainAdvertisementTableViewCell.reusableIdentifier, for: indexPath) as? MainAdvertisementTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            return cell
+        }
+        
         let cell = UITableViewCell()
         cell.backgroundColor = .gray
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? tableView.frame.height / 2 : 40
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "기획전" : "새로운 스터디"
     }
 }
