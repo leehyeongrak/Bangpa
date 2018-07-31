@@ -21,6 +21,10 @@
 		3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */; };
 		3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */; };
 		3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */; };
+		3ED5CDFE2110AEDD00E8DF6B /* MainAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */; };
+		3ED5CE002110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */; };
+		3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */; };
+		3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
 		3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAdvertisementCell.swift; sourceTree = "<group>"; };
+		3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAdvertisementTableViewCell.swift; sourceTree = "<group>"; };
+		3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
+		3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewAdvertisementCollectionViewPersenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
 				3ED5CDF92110AB8700E8DF6B /* Extensions */,
 				3ED5CDF62110A1C000E8DF6B /* Presenters */,
 				3ED5CDF521109DB100E8DF6B /* Storyboards */,
@@ -111,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */,
+				3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -119,8 +129,18 @@
 			isa = PBXGroup;
 			children = (
 				3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */,
+				3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3ED5CDFC2110AE9A00E8DF6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */,
+				3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED5CE002110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
+				3ED5CDFE2110AEDD00E8DF6B /* MainAdvertisementCell.swift in Sources */,
 				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
+				3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */,
+				3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
