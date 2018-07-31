@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */; };
-		3ED5CDC1211088C200E8DF6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC0211088C200E8DF6B /* ViewController.swift */; };
 		3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC2211088C200E8DF6B /* Main.storyboard */; };
 		3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC5211088C300E8DF6B /* Assets.xcassets */; };
 		3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC7211088C300E8DF6B /* LaunchScreen.storyboard */; };
+		3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDE521109B9500E8DF6B /* MainViewController.swift */; };
+		3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDE721109B9E00E8DF6B /* MainViewController.storyboard */; };
+		3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */; };
+		3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */; };
+		3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */; };
+		3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */; };
+		3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */; };
+		3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3ED5CDBB211088C200E8DF6B /* Bangpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3ED5CDC0211088C200E8DF6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3ED5CDC3211088C200E8DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3ED5CDC5211088C300E8DF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ED5CDC8211088C300E8DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED5CDCA211088C300E8DF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED5CDE521109B9500E8DF6B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3ED5CDE721109B9E00E8DF6B /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStudyRoomViewController.storyboard; sourceTree = "<group>"; };
+		3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyRoomViewController.swift; sourceTree = "<group>"; };
+		3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyGroupViewController.swift; sourceTree = "<group>"; };
+		3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStudyGroupViewController.storyboard; sourceTree = "<group>"; };
+		3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageViewController.storyboard; sourceTree = "<group>"; };
+		3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,37 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3ED5CDF521109DB100E8DF6B /* Storyboards */,
+				3ED5CDD021108FFD00E8DF6B /* ViewControllers */,
 				3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */,
-				3ED5CDC0211088C200E8DF6B /* ViewController.swift */,
 				3ED5CDC2211088C200E8DF6B /* Main.storyboard */,
 				3ED5CDC5211088C300E8DF6B /* Assets.xcassets */,
 				3ED5CDC7211088C300E8DF6B /* LaunchScreen.storyboard */,
 				3ED5CDCA211088C300E8DF6B /* Info.plist */,
 			);
 			path = Bangpa;
+			sourceTree = "<group>";
+		};
+		3ED5CDD021108FFD00E8DF6B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDE521109B9500E8DF6B /* MainViewController.swift */,
+				3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */,
+				3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */,
+				3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3ED5CDF521109DB100E8DF6B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDE721109B9E00E8DF6B /* MainViewController.storyboard */,
+				3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */,
+				3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */,
+				3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +159,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */,
+				3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */,
 				3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */,
 				3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */,
+				3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */,
 				3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */,
+				3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ED5CDC1211088C200E8DF6B /* ViewController.swift in Sources */,
+				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
+				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
+				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452DHHAC9T;
 				INFOPLIST_FILE = Bangpa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452DHHAC9T;
 				INFOPLIST_FILE = Bangpa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
