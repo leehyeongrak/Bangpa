@@ -20,6 +20,12 @@
 		3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */; };
 		3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */; };
 		3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */; };
+		3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */; };
+		3ED5CDFE2110AEDD00E8DF6B /* MainAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */; };
+		3ED5CE002110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */; };
+		3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */; };
+		3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */; };
+		AF9D39D1F3A7B0FD41E2B7ED /* Pods_Bangpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,14 @@
 		3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageViewController.storyboard; sourceTree = "<group>"; };
 		3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
+		3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAdvertisementCell.swift; sourceTree = "<group>"; };
+		3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAdvertisementTableViewCell.swift; sourceTree = "<group>"; };
+		3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
+		3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewAdvertisementCollectionViewPersenter.swift; sourceTree = "<group>"; };
+		6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangpa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A77653603DB72FE9FEA2C2 /* Pods-Bangpa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangpa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa.release.xcconfig"; sourceTree = "<group>"; };
+		F133BDE31E2615661711FE71 /* Pods-Bangpa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangpa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +59,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9D39D1F3A7B0FD41E2B7ED /* Pods_Bangpa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25E8EC4EBA501131CB31A7D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F133BDE31E2615661711FE71 /* Pods-Bangpa.debug.xcconfig */,
+				B4A77653603DB72FE9FEA2C2 /* Pods-Bangpa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3ED5CDB2211088C200E8DF6B = {
 			isa = PBXGroup;
 			children = (
 				3ED5CDBD211088C200E8DF6B /* Bangpa */,
 				3ED5CDBC211088C200E8DF6B /* Products */,
+				25E8EC4EBA501131CB31A7D5 /* Pods */,
+				FFA40D263ABA83B3E83AB0A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +96,8 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
+				3ED5CDF92110AB8700E8DF6B /* Extensions */,
 				3ED5CDF62110A1C000E8DF6B /* Presenters */,
 				3ED5CDF521109DB100E8DF6B /* Storyboards */,
 				3ED5CDD021108FFD00E8DF6B /* ViewControllers */,
@@ -108,8 +136,35 @@
 			isa = PBXGroup;
 			children = (
 				3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */,
+				3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3ED5CDF92110AB8700E8DF6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDFA2110ABA100E8DF6B /* ThemeColor.swift */,
+				3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3ED5CDFC2110AE9A00E8DF6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */,
+				3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FFA40D263ABA83B3E83AB0A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ED5CDCD211088C300E8DF6B /* Build configuration list for PBXNativeTarget "Bangpa" */;
 			buildPhases = (
+				DDD280E81559A6D3F4F4D4C2 /* [CP] Check Pods Manifest.lock */,
 				3ED5CDB7211088C200E8DF6B /* Sources */,
 				3ED5CDB8211088C200E8DF6B /* Frameworks */,
 				3ED5CDB9211088C200E8DF6B /* Resources */,
+				B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,17 +239,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD280E81559A6D3F4F4D4C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bangpa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3ED5CDB7211088C200E8DF6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED5CE002110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
+				3ED5CDFE2110AEDD00E8DF6B /* MainAdvertisementCell.swift in Sources */,
 				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
+				3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */,
+				3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,16 +437,14 @@
 		};
 		3ED5CDCE211088C300E8DF6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F133BDE31E2615661711FE71 /* Pods-Bangpa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452DHHAC9T;
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -353,16 +454,14 @@
 		};
 		3ED5CDCF211088C300E8DF6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A77653603DB72FE9FEA2C2 /* Pods-Bangpa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452DHHAC9T;
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

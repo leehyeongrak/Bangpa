@@ -8,6 +8,10 @@
 
 import Foundation
 
-class MainVCPresenter {
+protocol MainViewProtocol: class {
     
+}
+
+class MainVCPresenter {
+    private weak var mainView: MainViewProtocol?
 }
