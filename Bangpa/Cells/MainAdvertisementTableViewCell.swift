@@ -9,45 +9,56 @@
 import UIKit
 
 class MainAdvertisementTableViewCell: UITableViewCell {
+    @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var collectionView: UICollectionView!
+    let cellCount = 4
     
-    @IBOutlet weak var colletionView: UICollectionView!
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        colletionView.delegate = self
-        colletionView.dataSource = self
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
     }
+    
+    private func indexOfMajorCell() -> Int {
+        let itemWidth = collectionViewLayout.itemSize.width
+        let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
+        let index = Int(round(proportionalOffset))
+        let safeIndex = max(0, min(cellCount - 1, index))
+        return safeIndex
+    }
 }
 
-extension MainAdvertisementTableViewCell: UICollectionViewDelegate {
-    
-}
-
-extension MainAdvertisementTableViewCell: UICollectionViewDataSource {
-    
+extension MainAdvertisementTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainAdvertisementCell.reusableIdentifier, for: indexPath) as? MainAdvertisementCell else {
-            return UICollectionViewCell()
-        }
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainAdvertisementCell.reusableIdentifier, for: indexPath) as! MainAdvertisementCell
         return cell
+    }
+    
+    // scrollview delegates
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        targetContentOffset.pointee = scrollView.contentOffset
+        let indexOfMajorCell = self.indexOfMajorCell()
+        print(indexOfMajorCell)
+        let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
+        collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 }
 
 extension MainAdvertisementTableViewCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: colletionView.frame.width - 20, height: collectionView.frame.height * 0.8)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionViewLayout.collectionView!.frame.size.width - 40 * 2, height: collectionView.frame.size.height)
     }
 }
