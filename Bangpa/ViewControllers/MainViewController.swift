@@ -74,18 +74,18 @@ extension MainViewController: UITableViewDataSource {
             return cell
         }
         
-        
-        if section == .advertisement {
+        switch section {
+        case .advertisement:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MainAdvertisementTableViewCell.reusableIdentifier, for: indexPath) as? MainAdvertisementTableViewCell else {
                 return UITableViewCell()
             }
             
             return cell
+        case .newStudy:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: StudyGroupTableViewCell.reusableIdentifier, for: indexPath) as? StudyGroupTableViewCell else { return UITableViewCell()}
+            
+            return cell
         }
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: StudyGroupTableViewCell.reusableIdentifier, for: indexPath) as? StudyGroupTableViewCell else { return UITableViewCell()}
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
