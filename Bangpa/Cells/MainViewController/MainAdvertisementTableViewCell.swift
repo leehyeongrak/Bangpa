@@ -29,9 +29,9 @@ class MainAdvertisementTableViewCell: UITableViewCell {
         let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
         var index = Int(round(proportionalOffset))
         
-        if CGFloat(index) - proportionalOffset < -0.2 {
+        if CGFloat(index) - proportionalOffset < -0.15 {
             index += 1
-        }else if CGFloat(index) - proportionalOffset > 0.2 {
+        }else if CGFloat(index) - proportionalOffset > 0.15 {
             index -= 1
         }
         
