@@ -78,7 +78,7 @@ extension MainViewController: UITableViewDataSource {
         
         switch section {
         case .advertisement:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainAdvertisementTableViewCell.reusableIdentifier, for: indexPath) as? MainAdvertisementTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainPromotionTableViewCell.reusableIdentifier, for: indexPath) as? MainPromotionTableViewCell else {
                 return UITableViewCell()
             }
             

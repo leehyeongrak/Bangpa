@@ -8,11 +8,10 @@
 
 import UIKit
 
-class MainAdvertisementCell: UICollectionViewCell {
+class MainPromotionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             imageView.layer.cornerRadius = 10
-            imageView.layer.masksToBounds = false
         }
     }
     
