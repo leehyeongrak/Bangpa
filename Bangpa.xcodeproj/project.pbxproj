@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
+		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
+		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
 		3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */; };
 		3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC2211088C200E8DF6B /* Main.storyboard */; };
 		3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC5211088C300E8DF6B /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		3ED5CDBB211088C200E8DF6B /* Bangpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED5CDC3211088C200E8DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +81,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3EC4FBBE212971A700E19A54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3EC4FBC4212984CA00E19A54 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */,
+				3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */,
+				3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */,
+				3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */,
+				3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		3ED5CDB2211088C200E8DF6B = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +121,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3EC4FBBE212971A700E19A54 /* Views */,
 				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
 				3ED5CDF92110AB8700E8DF6B /* Extensions */,
 				3ED5CDF62110A1C000E8DF6B /* Presenters */,
@@ -153,8 +179,7 @@
 		3ED5CDFC2110AE9A00E8DF6B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3ED5CDFD2110AEDD00E8DF6B /* MainAdvertisementCell.swift */,
-				3ED5CDFF2110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift */,
+				3EC4FBC4212984CA00E19A54 /* MainViewController */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -227,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */,
 				3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */,
 				3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */,
 				3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */,
@@ -285,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */,
 				3ED5CE002110AFAB00E8DF6B /* MainAdvertisementTableViewCell.swift in Sources */,
+				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
@@ -444,7 +472,10 @@
 				DEVELOPMENT_TEAM = 452DHHAC9T;
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -461,7 +492,10 @@
 				DEVELOPMENT_TEAM = 452DHHAC9T;
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

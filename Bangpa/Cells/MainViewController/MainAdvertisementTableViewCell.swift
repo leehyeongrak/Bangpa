@@ -27,7 +27,14 @@ class MainAdvertisementTableViewCell: UITableViewCell {
     private func indexOfMajorCell() -> Int {
         let itemWidth = collectionViewLayout.itemSize.width
         let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
-        let index = Int(round(proportionalOffset))
+        var index = Int(round(proportionalOffset))
+        
+        if CGFloat(index) - proportionalOffset < -0.2 {
+            index += 1
+        }else if CGFloat(index) - proportionalOffset > 0.2 {
+            index -= 1
+        }
+        
         let safeIndex = max(0, min(cellCount - 1, index))
         return safeIndex
     }
@@ -47,7 +54,6 @@ extension MainAdvertisementTableViewCell: UICollectionViewDelegate, UICollection
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         targetContentOffset.pointee = scrollView.contentOffset
         let indexOfMajorCell = self.indexOfMajorCell()
-        print(indexOfMajorCell)
         let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
         collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
@@ -55,10 +61,10 @@ extension MainAdvertisementTableViewCell: UICollectionViewDelegate, UICollection
 
 extension MainAdvertisementTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionViewLayout.collectionView!.frame.size.width - 40 * 2, height: collectionView.frame.size.height)
+        return CGSize(width: collectionViewLayout.collectionView!.frame.size.width - 20 * 2, height: collectionView.frame.size.height)
     }
 }
