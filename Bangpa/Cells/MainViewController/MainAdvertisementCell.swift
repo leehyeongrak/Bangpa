@@ -9,15 +9,18 @@
 import UIKit
 
 class MainAdvertisementCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.layer.cornerRadius = 10
+            imageView.layer.masksToBounds = false
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
     }
 }
