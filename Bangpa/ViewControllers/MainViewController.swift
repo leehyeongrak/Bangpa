@@ -33,6 +33,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
+        self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
     }
     
     fileprivate func setupTableView(){
@@ -74,18 +76,18 @@ extension MainViewController: UITableViewDataSource {
             return cell
         }
         
-        
-        if section == .advertisement {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainAdvertisementTableViewCell.reusableIdentifier, for: indexPath) as? MainAdvertisementTableViewCell else {
+        switch section {
+        case .advertisement:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainPromotionTableViewCell.reusableIdentifier, for: indexPath) as? MainPromotionTableViewCell else {
                 return UITableViewCell()
             }
             
             return cell
+        case .newStudy:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: StudyGroupTableViewCell.reusableIdentifier, for: indexPath) as? StudyGroupTableViewCell else { return UITableViewCell()}
+            
+            return cell
         }
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: StudyGroupTableViewCell.reusableIdentifier, for: indexPath) as? StudyGroupTableViewCell else { return UITableViewCell()}
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

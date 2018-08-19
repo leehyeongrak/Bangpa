@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainAdvertisementTableViewCell: UITableViewCell {
+class MainPromotionTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     let cellCount = 4
@@ -29,9 +29,9 @@ class MainAdvertisementTableViewCell: UITableViewCell {
         let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
         var index = Int(round(proportionalOffset))
         
-        if CGFloat(index) - proportionalOffset < -0.2 {
+        if CGFloat(index) - proportionalOffset < -0.15 {
             index += 1
-        }else if CGFloat(index) - proportionalOffset > 0.2 {
+        }else if CGFloat(index) - proportionalOffset > 0.15 {
             index -= 1
         }
         
@@ -40,13 +40,13 @@ class MainAdvertisementTableViewCell: UITableViewCell {
     }
 }
 
-extension MainAdvertisementTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainPromotionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainAdvertisementCell.reusableIdentifier, for: indexPath) as! MainAdvertisementCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainPromotionCollectionViewCell.reusableIdentifier, for: indexPath) as! MainPromotionCollectionViewCell
         return cell
     }
     
@@ -59,7 +59,7 @@ extension MainAdvertisementTableViewCell: UICollectionViewDelegate, UICollection
     }
 }
 
-extension MainAdvertisementTableViewCell: UICollectionViewDelegateFlowLayout {
+extension MainPromotionTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
