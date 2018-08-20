@@ -16,6 +16,7 @@
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
 		3EC4FBCE2129AD9F00E19A54 /* GradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCD2129AD9F00E19A54 /* GradientExtensions.swift */; };
+		3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBE2212A5D5100E19A54 /* NMapViewResources.swift */; };
 		3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */; };
 		3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC2211088C200E8DF6B /* Main.storyboard */; };
 		3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC5211088C300E8DF6B /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBCD2129AD9F00E19A54 /* GradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtensions.swift; sourceTree = "<group>"; };
 		3EC4FBE02129C36C00E19A54 /* Bangpa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangpa-Bridging-Header.h"; sourceTree = "<group>"; };
+		3EC4FBE2212A5D5100E19A54 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		3ED5CDBB211088C200E8DF6B /* Bangpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED5CDC3211088C200E8DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
+		3EC4FBE1212A5D3700E19A54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EC4FBE2212A5D5100E19A54 /* NMapViewResources.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3ED5CDB2211088C200E8DF6B = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3EC4FBE1212A5D3700E19A54 /* Resources */,
 				3EC4FBBE212971A700E19A54 /* Views */,
 				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
 				3ED5CDF92110AB8700E8DF6B /* Extensions */,
@@ -365,6 +376,7 @@
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
+				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,

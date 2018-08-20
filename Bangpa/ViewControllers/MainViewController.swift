@@ -30,10 +30,22 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var showMapButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Show map", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(handleShowMapViewController), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
+        setupNavigationController()
+    }
+    
+    fileprivate func setupNavigationController(){
+        self.navigationItem.titleView = showMapButton
         self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
     }
     
@@ -41,6 +53,11 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: SectionDescriptionTableViewCell.reusableIdentifier, bundle: nil), forCellReuseIdentifier: SectionDescriptionTableViewCell.reusableIdentifier)
+    }
+    
+    @objc func handleShowMapViewController(_ sender: UIButton) {
+        let mapViewController = MapViewController.initFromStoryboard()
+        self.present(mapViewController, animated: true, completion: nil)
     }
 }
 
