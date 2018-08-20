@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5533B92129C76000288AEE /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; };
+		3E5533BA2129C76000288AEE /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E5533BC2129C77A00288AEE /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */; };
+		3E5533BF212A4F0000288AEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5533BE212A4F0000288AEE /* MapViewController.swift */; };
+		3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5533C0212A4F0900288AEE /* MapViewController.storyboard */; };
 		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
 		3EC4FBCE2129AD9F00E19A54 /* GradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCD2129AD9F00E19A54 /* GradientExtensions.swift */; };
+		3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBE2212A5D5100E19A54 /* NMapViewResources.swift */; };
 		3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */; };
 		3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC2211088C200E8DF6B /* Main.storyboard */; };
 		3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDC5211088C300E8DF6B /* Assets.xcassets */; };
@@ -32,11 +38,31 @@
 		AF9D39D1F3A7B0FD41E2B7ED /* Pods_Bangpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3EC4FBDD2129C18B00E19A54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E5533BA2129C76000288AEE /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3E5533B82129C76000288AEE /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
+		3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../../Downloads/maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
+		3E5533BE212A4F0000288AEE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3E5533C0212A4F0900288AEE /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBCD2129AD9F00E19A54 /* GradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtensions.swift; sourceTree = "<group>"; };
+		3EC4FBE02129C36C00E19A54 /* Bangpa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bangpa-Bridging-Header.h"; sourceTree = "<group>"; };
+		3EC4FBE2212A5D5100E19A54 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		3ED5CDBB211088C200E8DF6B /* Bangpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bangpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED5CDBE211088C200E8DF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED5CDC3211088C200E8DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5533BC2129C77A00288AEE /* NMapViewerSDK.framework in Frameworks */,
+				3E5533B92129C76000288AEE /* ApiGatewayMac.framework in Frameworks */,
 				AF9D39D1F3A7B0FD41E2B7ED /* Pods_Bangpa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,9 +130,18 @@
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
+		3EC4FBE1212A5D3700E19A54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EC4FBE2212A5D5100E19A54 /* NMapViewResources.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3ED5CDB2211088C200E8DF6B = {
 			isa = PBXGroup;
 			children = (
+				3E5533B82129C76000288AEE /* ApiGatewayMac.framework */,
 				3ED5CDBD211088C200E8DF6B /* Bangpa */,
 				3ED5CDBC211088C200E8DF6B /* Products */,
 				25E8EC4EBA501131CB31A7D5 /* Pods */,
@@ -123,6 +160,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3EC4FBE1212A5D3700E19A54 /* Resources */,
 				3EC4FBBE212971A700E19A54 /* Views */,
 				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
 				3ED5CDF92110AB8700E8DF6B /* Extensions */,
@@ -134,6 +172,7 @@
 				3ED5CDC5211088C300E8DF6B /* Assets.xcassets */,
 				3ED5CDC7211088C300E8DF6B /* LaunchScreen.storyboard */,
 				3ED5CDCA211088C300E8DF6B /* Info.plist */,
+				3EC4FBE02129C36C00E19A54 /* Bangpa-Bridging-Header.h */,
 			);
 			path = Bangpa;
 			sourceTree = "<group>";
@@ -145,6 +184,7 @@
 				3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */,
 				3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */,
 				3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */,
+				3E5533BE212A4F0000288AEE /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +196,7 @@
 				3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */,
 				3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */,
 				3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */,
+				3E5533C0212A4F0900288AEE /* MapViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -190,6 +231,7 @@
 		FFA40D263ABA83B3E83AB0A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */,
 				6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */,
 			);
 			name = Frameworks;
@@ -207,6 +249,8 @@
 				3ED5CDB8211088C200E8DF6B /* Frameworks */,
 				3ED5CDB9211088C200E8DF6B /* Resources */,
 				B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */,
+				3EC4FBDD2129C18B00E19A54 /* Embed Frameworks */,
+				3E5533BD2129C87900288AEE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,6 +304,7 @@
 				3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */,
 				3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */,
 				3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */,
+				3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */,
 				3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */,
 				3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */,
 				3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */,
@@ -269,6 +314,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E5533BD2129C87900288AEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/dongkun/Downloads/maps.ios-master/Scripts/strip-frameworks.sh";
+		};
 		B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,6 +376,7 @@
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
+				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
@@ -327,6 +386,7 @@
 				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
 				3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */,
 				3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */,
+				3E5533BF212A4F0000288AEE /* MapViewController.swift in Sources */,
 				3EC4FBCE2129AD9F00E19A54 /* GradientExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,14 +534,29 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452DHHAC9T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../../../Downloads/maps.ios-master/Frameworks\"",
+				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dongkun/Programming/ADHOC/Bangpa/Bangpa/Bangpa-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -494,14 +569,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452DHHAC9T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dongkun/Programming/ADHOC/Bangpa/Bangpa/Bangpa-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
