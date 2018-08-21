@@ -17,7 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="s5z-WZ-pch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkZ-xv-ZM8">
+                                <rect key="frame" x="323" y="551" width="36" height="36"/>
+                                <state key="normal" image="v4_btn_navi_location_normal"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="H5k-9V-blh" eventType="touchUpInside" id="V2j-3p-fHr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="bottom" secondItem="lkZ-xv-ZM8" secondAttribute="bottom" constant="16" id="6Ge-B4-u0D"/>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="trailing" secondItem="lkZ-xv-ZM8" secondAttribute="trailing" constant="16" id="DGn-Xk-At1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HVR-ej-XJt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Searh" id="75o-Gm-5ub">
@@ -28,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="changeStateButton" destination="lkZ-xv-ZM8" id="MOy-GL-5Gl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wey-FD-tNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,4 +72,7 @@
             <point key="canvasLocation" x="21.600000000000001" y="67.916041979010501"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="v4_btn_navi_location_normal" width="36" height="36"/>
+    </resources>
 </document>
