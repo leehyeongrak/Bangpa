@@ -11,6 +11,8 @@ import UIKit
 class MapViewController: UIViewController {
     
     private var mapView: NMapView!
+    private var mapVCPresenter = MapVCPresenter(with: NMapLocationManager.getSharedInstance())
+    @IBOutlet weak var changeStateButton: UIButton!
     
     static func initFromStoryboard() -> UINavigationController {
         let storyboard = UIStoryboard(name: MapViewController.reusableIdentifier, bundle: nil)
@@ -20,6 +22,7 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapVCPresenter.attachView(vc: self)
         setupMapView()
     }
     
@@ -28,9 +31,20 @@ class MapViewController: UIViewController {
         self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        mapVCPresenter.disableLocationUpdate()
+    }
+    
     @IBAction func searchCompleteButtonDidTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        mapVCPresenter.setupState()
+    }
+    
     fileprivate func setupMapView() {
         mapView = NMapView(frame: self.view.frame)
         
@@ -43,6 +57,7 @@ class MapViewController: UIViewController {
             mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
             view.addSubview(mapView)
+            view.bringSubview(toFront: changeStateButton)
         }
     }
     
@@ -74,5 +89,37 @@ extension MapViewController: NMapViewDelegate, NMapPOIdataOverlayDelegate {
     
     func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, calloutOffsetWithType poiFlagType: NMapPOIflagType) -> CGPoint {
         return CGPoint(x: 0, y: 0)
+    }
+}
+
+extension MapViewController: MapViewProtocol {
+    func updateState(_ newState: TrackingState) {
+        switch newState {
+        case .disabled:
+            changeStateButton?.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_normal"), for: .normal)
+        case .tracking:
+            changeStateButton?.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_selected"), for: .normal)
+        }
+    }
+    
+    func clearMyLocation() {
+        mapView?.mapOverlayManager.clearMyLocationOverlay()
+    }
+    
+    func setupMyLocation(location: NGeoPoint, locationAccuracy: Float) {
+        mapView?.mapOverlayManager.setMyLocation(location, locationAccuracy: locationAccuracy)
+        mapView?.setMapCenter(location)
+    }
+    
+    func showLocaitonFailError(title: String, message: String) {
+        if (!message.isEmpty) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title:"OK", style:.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        
+        if let mapView = mapView, mapView.isAutoRotateEnabled {
+            mapView.setAutoRotateEnabled(false, animate: true)
+        }
     }
 }

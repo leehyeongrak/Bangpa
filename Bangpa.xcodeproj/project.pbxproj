@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04E812212C601700F7EA41 /* MapVCPresenter.swift */; };
 		3E5533B92129C76000288AEE /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; };
 		3E5533BA2129C76000288AEE /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E5533BC2129C77A00288AEE /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E04E812212C601700F7EA41 /* MapVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCPresenter.swift; sourceTree = "<group>"; };
 		3E5533B82129C76000288AEE /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
 		3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../../Downloads/maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
 		3E5533BE212A4F0000288AEE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */,
 				3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */,
+				3E04E812212C601700F7EA41 /* MapVCPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDFE2110AEDD00E8DF6B /* MainPromotionCollectionViewCell.swift in Sources */,
+				3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */,
 				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
 				3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */,
 				3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */,
