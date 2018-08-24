@@ -19,6 +19,17 @@ class StudyGroupSetFilterViewController: UIViewController, UITableViewDelegate, 
         self.tabBarController?.tabBar.layer.isHidden = true
         self.navigationItem.title = "게시물 필터설정"
         self.modalPresentationStyle = .overCurrentContext
+        
+        setupBarButtons()
+    }
+    
+    fileprivate func setupBarButtons() {
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "설정", style: .done, target: self, action: #selector(handleSetting))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .redo, target: self, action: #selector(handleSetting))
+    }
+    
+    @objc func handleSetting() {
+        print("Setting")
     }
 
     

@@ -8,15 +8,21 @@
 
 import UIKit
 
-class StudyRegionSelectViewController: UIViewController {
+class StudyRegionSelectViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     @IBOutlet weak var dismissButton: UIButton!
     @IBAction func dismissButtonDidTapped(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
     }
+    
+    var regions = ["강남구", "강동구", "강북구", "강서구", "관악구"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         let origImage = UIImage(named: "Cancel")
         let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
@@ -27,21 +33,65 @@ class StudyRegionSelectViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return regions.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RegionCell", for: indexPath) as! RegionCollectionViewCell
+        cell.regionLabel.text = regions[indexPath.item]
+        
+        return cell
+    }
+    
+//    CollectionViewLayout Func
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 78, height: 32)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    }
+    
+    
+}
 
+@IBDesignable
+extension UITextField {
+    @IBInspectable
+    var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable
+    var borderRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable
+    var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil}
+            return UIColor(cgColor: color)
+        }
+    }
 }
