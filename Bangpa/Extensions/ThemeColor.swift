@@ -16,4 +16,20 @@ extension UIColor {
     static var themeOrange: UIColor {
         return UIColor(hex: 0xf5a623)
     }
+    
+    static var footerColor: UIColor {
+        return UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1)
+    }
+    
+    static var themeBlue: UIColor {
+        return UIColor(red: 17/255.0, green: 99/255.0, blue: 251/255.0, alpha: 1)
+    }
+    
+    static var gradientStartBlue: UIColor {
+        return UIColor(red: 14/255.0, green: 74/255.0, blue: 251/255.0, alpha: 1)
+    }
+    
+    static var gradientEndBlue: UIColor {
+        return UIColor(red: 21/255.0, green: 127/255.0, blue: 243/255.0, alpha: 1)
+    }
 }

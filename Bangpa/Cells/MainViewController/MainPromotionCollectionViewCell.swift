@@ -8,16 +8,18 @@
 
 import UIKit
 
-class MainAdvertisementCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+class MainPromotionCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.layer.cornerRadius = 10
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
     }
 }

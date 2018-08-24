@@ -12,6 +12,8 @@ class SearchStudyGroupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
 
         // Do any additional setup after loading the view.
     }
