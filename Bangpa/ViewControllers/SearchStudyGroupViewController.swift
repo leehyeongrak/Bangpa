@@ -49,6 +49,10 @@ class SearchStudyGroupViewController: UIViewController, UITableViewDataSource, U
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.layer.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

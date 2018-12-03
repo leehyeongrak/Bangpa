@@ -21,13 +21,39 @@ class SearchStudyGroupPostViewController: UIViewController, UITableViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpNavigationBar()
         settingViews()
+        
         self.navigationItem.title = " "
         self.tabBarController?.tabBar.layer.isHidden = true
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
+    }
+    
+    func setUpNavigationBar() {
+//        self.navigationItem.title = nil
+        
+        let navigationSettingButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        navigationSettingButton.setBackgroundImage(UIImage(named: "Setting"), for: .normal)
+        //
+        navigationSettingButton.addTarget(self, action: #selector(touchUpSettingButton), for: .touchUpInside)
+        //
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: navigationSettingButton)
+        
+    }
+    
+    @objc func touchUpSettingButton() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "SearchStudyGroupViewController", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "SearchStudyGroupWritePostViewController") as! SearchStudyGroupWritePostViewController
+        viewController.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+//        let backItem = UIBarButtonItem()
+//        backItem.title = " "
+//        navigationItem.backBarButtonItem = backItem
     }
     
     func settingViews() {
@@ -49,10 +75,10 @@ class SearchStudyGroupPostViewController: UIViewController, UITableViewDelegate,
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        self.tabBarController?.tabBar.layer.isHidden = false
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(true)
+//        self.tabBarController?.tabBar.layer.isHidden = false
+//    }
     /*
     // MARK: - Navigation
 
