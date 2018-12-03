@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Upr-xD-iY8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="2Ex-oV-G6U">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H5k-9V-blh" customClass="MapViewController" customModule="Bangpa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5z-WZ-pch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkZ-xv-ZM8">
+                                <rect key="frame" x="323" y="551" width="36" height="36"/>
+                                <state key="normal" image="v4_btn_navi_location_normal"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="H5k-9V-blh" eventType="touchUpInside" id="V2j-3p-fHr"/>
+                                </connections>
+                            </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FZG-Ys-Pvc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultcell" textLabel="aoz-GP-cWT" detailTextLabel="mb6-1A-BsX" style="IBUITableViewCellStyleSubtitle" id="yb3-XQ-6o3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yb3-XQ-6o3" id="vKL-x0-H5s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aoz-GP-cWT">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mb6-1A-BsX">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="bottom" secondItem="lkZ-xv-ZM8" secondAttribute="bottom" constant="16" id="6Ge-B4-u0D"/>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="trailing" secondItem="lkZ-xv-ZM8" secondAttribute="trailing" constant="16" id="DGn-Xk-At1"/>
+                            <constraint firstItem="FZG-Ys-Pvc" firstAttribute="leading" secondItem="HVR-ej-XJt" secondAttribute="leading" id="YfC-YV-rfN"/>
+                            <constraint firstItem="FZG-Ys-Pvc" firstAttribute="top" secondItem="HVR-ej-XJt" secondAttribute="top" id="a4g-jS-Pu6"/>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="trailing" secondItem="FZG-Ys-Pvc" secondAttribute="trailing" id="tDm-S1-zfc"/>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="bottom" secondItem="FZG-Ys-Pvc" secondAttribute="bottom" id="wxk-L6-w4X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HVR-ej-XJt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Searh" id="75o-Gm-5ub">
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="O3T-Nt-8MV">
+                            <color key="tintColor" red="0.066666666669999999" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="searchCompleteButtonDidTapped:" destination="H5k-9V-blh" id="R3P-fM-11P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="changeStateButton" destination="lkZ-xv-ZM8" id="MOy-GL-5Gl"/>
+                        <outlet property="searchResultTableView" destination="FZG-Ys-Pvc" id="56K-Ub-s4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wey-FD-tNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="67.916041979010501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pff-w6-Lfm">
+            <objects>
+                <navigationController storyboardIdentifier="MapViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Upr-xD-iY8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Q03-pi-RWC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.066666666669999999" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H5k-9V-blh" kind="relationship" relationship="rootViewController" id="WMn-bf-Alf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLf-Yk-KUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="67.916041979010501"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="v4_btn_navi_location_normal" width="36" height="36"/>
+    </resources>
+</document>
