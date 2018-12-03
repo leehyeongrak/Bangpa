@@ -56,8 +56,8 @@ class MainViewController: UIViewController {
     }
     
     @objc func handleShowMapViewController(_ sender: UIButton) {
-        let mapViewController = MapViewController.initFromStoryboard()
-        self.present(mapViewController, animated: true, completion: nil)
+//        let mapViewController = MapViewController.initFromStoryboard()
+//        self.present(mapViewController, animated: true, completion: nil)
     }
 }
 

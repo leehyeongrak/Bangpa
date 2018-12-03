@@ -11,13 +11,28 @@ import UIKit
 class StudyRegionSelectViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var gyeonggiButton: UIButton!
+    @IBOutlet weak var seoulButton: UIButton!
     
     @IBOutlet weak var dismissButton: UIButton!
     @IBAction func dismissButtonDidTapped(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
     }
     
-    var regions = ["강남구", "강동구", "강북구", "강서구", "관악구"]
+    private var seoulButtonIsSelect = true {
+        didSet {
+            if seoulButtonIsSelect == true {
+                self.seoulButton.setTitleColor(.black, for: .normal)
+                self.gyeonggiButton.setTitleColor(.lightGray, for: .normal)
+            } else {
+                self.seoulButton.setTitleColor(.lightGray, for: .normal)
+                self.gyeonggiButton.setTitleColor(.black, for: .normal)
+            }
+            
+        }
+    }
+    
+    var regions = ["강남구", "강동구", "강북구", "강서구", "관악구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구", "강남구", "강동구", "강북구", "강서구"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +72,17 @@ class StudyRegionSelectViewController: UIViewController, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     }
+    
+    @IBAction func seoulButtonTapped(_ sender: UIButton) {
+        seoulButtonIsSelect = true
+    }
+    
+    @IBAction func gyeonggiButtonTapped(_ sender: UIButton) {
+        seoulButtonIsSelect = false
+        
+    }
+    
+
     
     
 }
